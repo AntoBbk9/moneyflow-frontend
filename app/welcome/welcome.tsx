@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import DashboardChart from "./components/dashboardChart";
+import RecentTransactions from "./components/recentTransactions";
 export function Welcome() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -50,47 +51,13 @@ export function Welcome() {
 
       <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow h-64 mt-3">
         <DashboardChart />
+      </div>
+
+      <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mt-3">
+        <h2 className="font-semibold mb-4">Recent Transactions</h2>
+        <RecentTransactions />
       </div> 
 
     </div>
   );
 }
-
-// export default function Welcome() {
-//   return (
-//     <div className="flex">
-
-//       {/* Title */}
-//       <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-//         Dashboard
-//       </h1>
-
-//       {/* Stats Cards */}
-//       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-//         <div className="p-4 bg-white dark:bg-gray-900 rounded-xl shadow">
-//           <p className="text-gray-500">Total Balance</p>
-//           <h2 className="text-xl font-bold">$2,450</h2>
-//         </div>
-
-//         <div className="p-4 bg-white dark:bg-gray-900 rounded-xl shadow">
-//           <p className="text-gray-500">Income</p>
-//           <h2 className="text-xl font-bold text-green-500">$3,200</h2>
-//         </div>
-
-       
-
-       
-//       </div>
-
-//       {/* Charts Placeholder */}
-      
-
-//       {/* Transactions Table */}
-//       <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow">
-//         <h2 className="font-semibold mb-4">Recent Transactions</h2>
-//         <p>Table here...</p>
-//       </div>
-
-//     </div>
-//   );
-// }
