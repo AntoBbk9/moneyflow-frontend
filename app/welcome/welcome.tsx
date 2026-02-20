@@ -49,12 +49,11 @@ export function Welcome() {
  
        </div> 
 
-      <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow h-64 mt-3">
+      <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow h-72 mt-3 w-full">
         <DashboardChart />
       </div>
 
       <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow mt-3">
-        <h2 className="font-semibold mb-4">Recent Transactions</h2>
         <RecentTransactions />
       </div> 
 

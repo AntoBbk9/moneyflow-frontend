@@ -40,7 +40,7 @@ export function Sidebar({
   ];
 
   return (
-    <aside className="flex flex-col justify-between w-64 h-screen p-4 bg-white dark:bg-gray-900 shadow-lg transition-colors duration-300">
+    <aside className="fixed flex flex-col justify-between w-64 h-screen p-4 bg-white dark:bg-gray-900 shadow-lg transition-colors duration-300">
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-bold text-gray-800 dark:text-white">MoneyFlow</h2>

@@ -24,5 +24,8 @@ const data = {
 };
 
 export default function DashboardChart() {
-  return <Line data={data} />;
+  return <Line data={data}   options={{
+          responsive: true,
+          maintainAspectRatio: false,
+        }}/>;
 }

@@ -5,7 +5,6 @@ import { Sidebar } from "~/welcome/components/sidebar";
 export default function RootLayout() {
   const [darkMode, setDarkMode] = useState(false);
 
-  // Load theme from localStorage
   useEffect(() => {
     const stored = localStorage.getItem("theme");
     if (stored === "dark") {
@@ -14,7 +13,6 @@ export default function RootLayout() {
     }
   }, []);
 
-  // Apply theme and save
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -29,8 +27,7 @@ export default function RootLayout() {
     <div className="flex min-h-screen">
       <Sidebar darkMode={darkMode} setDarkMode={setDarkMode} />
 
-      {/* Page content */}
-      <main className="flex-1 p-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+      <main className="flex-1 ml-64 p-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <Outlet />
       </main>
     </div>
