@@ -26,7 +26,7 @@ export default function RootLayout() {
   }, [darkMode]);
 
   return (
-    <div className="flex">
+    <div className="flex min-h-screen">
       <Sidebar darkMode={darkMode} setDarkMode={setDarkMode} />
 
       {/* Page content */}

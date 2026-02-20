@@ -1,13 +1,7 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
-
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "MoneyFlow" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
-
-export default function Home() {
-  return <Welcome />;
+export default function Transactions() {
+  return (
+    <div>
+        <h1>Transactions</h1>
+    </div>
+  );
 }

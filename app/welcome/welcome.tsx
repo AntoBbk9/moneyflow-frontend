@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
-import { Sidebar } from "./components/sidebar";
-import { Outlet } from "react-router";
-
+import DashboardChart from "./components/dashboardChart";
 export function Welcome() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -26,28 +22,75 @@ export function Welcome() {
   }, [darkMode]);
 
   return (
-    // <main className={`flex items-center justify-center min-h-screen transition-colors duration-300 ${darkMode ? "bg-gray-950 text-white" : "bg-white text-gray-900"}`}>
-    //   <div className="flex flex-col items-center gap-8">
-    //     <img
-    //       src={darkMode ? logoDark : logoLight}
-    //       alt="Logo"
-    //       className="w-64"
-    //     />
-    //     <button
-    //       onClick={() => setDarkMode(!darkMode)}
-    //       className="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-    //     >
-    //       {darkMode ? "Switch to Light" : "Switch to Dark"}
-    //     </button>
-    //   </div>
-    // </main>
-    <div className="flex">
-      <Sidebar darkMode={darkMode} setDarkMode={setDarkMode} />
+    <div className="">
+      <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Dashboard</h1> 
 
-      {/* Page content */}
-      <main className="flex-1 p-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
-        <Outlet />
-      </main>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-5">
+        <div className="p-4 bg-white dark:bg-gray-900 rounded-xl shadow">
+          <p className="text-gray-500">Total Balance</p>
+          <h2 className="text-xl font-bold">$2,450</h2>
+        </div>
+
+        <div className="p-4 bg-white dark:bg-gray-900 rounded-xl shadow">
+          <p className="text-gray-500">Income</p>
+          <h2 className="text-xl font-bold text-green-500">$3,200</h2>
+        </div>
+
+        <div className="p-4 bg-white dark:bg-gray-900 rounded-xl shadow">
+          <p className="text-gray-500">Expenses</p>
+          <h2 className="text-xl font-bold text-red-500">$750</h2>
+        </div>
+
+        <div className="p-4 bg-white dark:bg-gray-900 rounded-xl shadow">
+          <p className="text-gray-500">Savings</p>
+          <h2 className="text-xl font-bold">$1,700</h2>
+        </div>
+ 
+       </div> 
+
+      <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow h-64 mt-3">
+        <DashboardChart />
+      </div> 
+
     </div>
   );
 }
+
+// export default function Welcome() {
+//   return (
+//     <div className="flex">
+
+//       {/* Title */}
+//       <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+//         Dashboard
+//       </h1>
+
+//       {/* Stats Cards */}
+//       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+//         <div className="p-4 bg-white dark:bg-gray-900 rounded-xl shadow">
+//           <p className="text-gray-500">Total Balance</p>
+//           <h2 className="text-xl font-bold">$2,450</h2>
+//         </div>
+
+//         <div className="p-4 bg-white dark:bg-gray-900 rounded-xl shadow">
+//           <p className="text-gray-500">Income</p>
+//           <h2 className="text-xl font-bold text-green-500">$3,200</h2>
+//         </div>
+
+       
+
+       
+//       </div>
+
+//       {/* Charts Placeholder */}
+      
+
+//       {/* Transactions Table */}
+//       <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow">
+//         <h2 className="font-semibold mb-4">Recent Transactions</h2>
+//         <p>Table here...</p>
+//       </div>
+
+//     </div>
+//   );
+// }
